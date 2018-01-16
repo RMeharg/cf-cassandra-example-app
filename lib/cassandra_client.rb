@@ -122,6 +122,10 @@ class CassandraClient < SimpleDelegator
   end
 
   def hosts
+    unless connection_details.fetch('hostname', nil).nil?
+      return connection_details.fetch('hostname', nil)
+    end
+    
     connection_details.fetch('nodes', %w[localhost])
   end
 

@@ -1,6 +1,6 @@
 ---
 applications:
-- name: cassandra-example-app
+- name: cassandra-example
   buildpack: ruby_buildpack
   memory: 256M
   instances: 1
